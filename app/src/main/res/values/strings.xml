@@ -5,6 +5,7 @@
     <string name="title_login_label">Identificación de usuarios</string>
     <string name="username_login_label">Username</string>
     <string name="password_login_label">Password</string>
+    <string name="save_login_label">Guardar usuario</string>
     <string name="action_validate">Validar</string>
     <string name="msg_login_ok">Todo OK</string>
     <string name="msg_login_fails">Las credenciales no son correctas</string>
