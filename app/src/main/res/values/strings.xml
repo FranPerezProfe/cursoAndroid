@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">cursoAndroid</string>
     <string name="username_login_label">Identificación de usuarios</string>
+    <string name="password_login_label">Password</string>
 </resources>
