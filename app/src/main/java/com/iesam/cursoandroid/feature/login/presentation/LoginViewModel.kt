@@ -2,6 +2,7 @@ package com.iesam.cursoandroid.feature.login.presentation
 
 import androidx.lifecycle.ViewModel
 import com.iesam.cursoandroid.feature.login.domain.DeleteUsernameUseCase
+import com.iesam.cursoandroid.feature.login.domain.GetUsernameUseCase
 import com.iesam.cursoandroid.feature.login.domain.SaveUsernameUseCase
 import com.iesam.cursoandroid.feature.login.domain.SignInUseCase
 
@@ -9,8 +10,11 @@ import com.iesam.cursoandroid.feature.login.domain.SignInUseCase
 class LoginViewModel(
     private val signInUseCase: SignInUseCase,
     private val saveUsernameUseCase: SaveUsernameUseCase,
-    private val deleteUsernameUseCase: DeleteUsernameUseCase
+    private val deleteUsernameUseCase: DeleteUsernameUseCase,
+    private val getUsernameUseCase: GetUsernameUseCase
 ) : ViewModel() {
+
+
 
     fun validateClicked(username: String, password: String, isRememberChecked: Boolean): Boolean {
 
@@ -22,5 +26,10 @@ class LoginViewModel(
 
         // val isValid: Boolean = signInUseCase.invoke(username, password) -> versión verbosa, mejor la siguiente
         return signInUseCase(username, password)
+    }
+
+
+    fun onResumed(): String? {
+        return getUsernameUseCase()
     }
 }

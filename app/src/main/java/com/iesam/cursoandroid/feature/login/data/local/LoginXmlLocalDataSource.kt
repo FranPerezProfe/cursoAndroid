@@ -1,15 +1,16 @@
-package com.iesam.cursoandroid.feature.login.data.remote
+package com.iesam.cursoandroid.feature.login.data.local
 
 import android.content.Context
 
 class LoginXmlLocalDataSource(private val context: Context) {
 
+    private val KEY_USERNAME = "key_username"
+
     val sharedPref = context.getSharedPreferences("username", Context.MODE_PRIVATE)
 
     fun saveUsername(username: String) {
         val editor = sharedPref.edit()
-        editor.putString("key_username", username)
-        editor.commit()
+        editor.putString("key_username", username).commit()
     }
 
 
@@ -24,9 +25,13 @@ class LoginXmlLocalDataSource(private val context: Context) {
     // En kotlin ---> Scope function: apply
     fun deleteUsername(username: String) {
         sharedPref.edit().apply {
-            remove("key_username")
+            remove(KEY_USERNAME)
             commit()
         }
+    }
+
+    fun getUsername(): String? {
+        return sharedPref.getString(KEY_USERNAME, null)
     }
 
 }

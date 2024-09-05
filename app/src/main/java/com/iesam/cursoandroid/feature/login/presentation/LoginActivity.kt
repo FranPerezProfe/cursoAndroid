@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel = loginFactory.provideLoginViewModel()
         setContentView(R.layout.activity_login)
         setupView()
+
     }
 
     private fun setupView() {
@@ -43,5 +44,23 @@ class LoginActivity : AppCompatActivity() {
                 Snackbar.make(findViewById<View>(R.id.main),  R.string.msg_login_fails, Snackbar.LENGTH_SHORT).show()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getSavedUser()
+    }
+
+    private fun getSavedUser() {
+
+        // Mejor versión -> hay que evitar que se repinte la vista si hay un nulo
+        loginViewModel.onResumed()?.let {
+            findViewById<EditText>(R.id.input_username).setText(it)
+        }
+
+        // Más verboso
+        /*loginViewModel.onResumed()?.let { username ->
+            findViewById<EditText>(R.id.input_username).setText(username)
+        }*/
     }
 }
