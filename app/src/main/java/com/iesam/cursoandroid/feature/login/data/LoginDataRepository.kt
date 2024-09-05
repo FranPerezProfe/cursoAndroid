@@ -14,4 +14,8 @@ class LoginDataRepository(private val remoteDataSource: LoginMockRemoteDataSourc
         localDataSource.saveUsername(username)
     }
 
+    override fun deleteUsername(username: String) {
+        localDataSource.deleteUsername(username)
+    }
+
 }
