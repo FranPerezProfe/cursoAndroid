@@ -9,4 +9,7 @@
     <string name="action_validate">Validar</string>
     <string name="msg_login_ok">Todo OK</string>
     <string name="msg_login_fails">Las credenciales no son correctas</string>
+    <string name="card_text_1">03-06-21</string>
+    <string name="card_text_2">Lorem</string>
+    <string name="card_text_3">Lorem Lorem Lorem</string>
 </resources>
