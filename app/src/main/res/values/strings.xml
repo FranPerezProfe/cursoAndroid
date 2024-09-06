@@ -12,4 +12,7 @@
     <string name="card_text_1">03-06-21</string>
     <string name="card_text_2">Lorem</string>
     <string name="card_text_3">Lorem Lorem Lorem</string>
+    <string name="title_ut3_ej11">Colabora</string>
+    <string name="text1_ut3_ej11">Hazte socio</string>
+    <string name="comment_ut3_ej11">Colabora donando una cantidad fija durante X tiempo</string>
 </resources>

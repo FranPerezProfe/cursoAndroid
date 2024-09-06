@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Font sizes-->
+    <dimen name="size_big">28sp</dimen>
+
+
+    <!-- Spaces entre elementos (Múltiplos de 8) -->
+    <!-- Solo para texto el espacio es 4 u 8 -->
+    <dimen name="small_spacing">8dp</dimen>
+    <dimen name="medium_spacing">16dp</dimen>
+</resources>

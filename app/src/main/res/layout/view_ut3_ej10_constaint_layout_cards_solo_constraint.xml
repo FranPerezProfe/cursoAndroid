@@ -16,7 +16,7 @@
 
     <TextView
         android:id="@+id/first_text"
-        app:layout_constraintTop_toEndOf="@id/first_element"
+        app:layout_constraintTop_toTopOf="@id/first_element"
         app:layout_constraintStart_toEndOf="@id/first_element"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
